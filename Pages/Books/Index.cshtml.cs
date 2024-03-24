@@ -6,9 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using LibraryManagement3.Data;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace LibraryManagement3.Pages.Books
 {
+    [Authorize]
+
     public class IndexModel : PageModel
     {
         private readonly LibraryManagement3.Data.ApplicationDbContext _context;

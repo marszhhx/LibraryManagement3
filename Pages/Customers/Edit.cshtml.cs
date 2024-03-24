@@ -7,9 +7,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LibraryManagement3.Data;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace LibraryManagement3.Pages.Customers
 {
+    [Authorize]
+
     public class EditModel : PageModel
     {
         private readonly LibraryManagement3.Data.ApplicationDbContext _context;

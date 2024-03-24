@@ -6,9 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using LibraryManagement3.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LibraryManagement3.Pages.Authors
 {
+    [Authorize]
+
     public class DetailsModel : PageModel
     {
         private readonly LibraryManagement3.Data.ApplicationDbContext _context;

@@ -7,10 +7,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using LibraryManagement3.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+
 
 
 namespace LibraryManagement3.Pages.Books
 {
+    [Authorize]
+
     public class CreateModel : PageModel
     {
         private readonly LibraryManagement3.Data.ApplicationDbContext _context;
