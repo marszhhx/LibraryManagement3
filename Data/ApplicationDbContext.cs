@@ -9,4 +9,10 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+    
+    public DbSet<Book> Books { get; set; }
+    public DbSet<Author> Authors { get; set; }
+    public DbSet<LibraryBranch> LibraryBranches { get; set; }
+    public DbSet<Customer> Customers { get; set; }
+
 }

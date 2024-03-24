@@ -1,0 +1,34 @@
+@model List<LibraryManagement3.ViewModels.BookViewModel>
+
+<h2>Books</h2>
+
+<a asp-action="Create" class="btn btn-success">Add New Book</a>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Book Title</th>
+        <th>Author Name</th>
+        <th>Branch Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.BookId</td>
+            <td>@book.Title</td>
+            <td>@book.AuthorName</td>
+            <td>@book.BranchName</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@book.BookId" class="btn btn-primary">Update</a>
+                <form asp-action="Delete" asp-route-id="@book.BookId" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this?');">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
