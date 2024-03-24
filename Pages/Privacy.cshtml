@@ -1,11 +1,11 @@
 ﻿@page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Global Error Demo Page";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<p>This is a page to show global error.</p>
 @{
     throw new Exception("This is a deliberate exception for testing purposes.");
 }

@@ -1,0 +1,36 @@
+@page
+@model LibraryManagement3.Pages.LibraryBranches.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LibraryBranch[0].BranchName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.LibraryBranch) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BranchName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.LibraryBranchId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.LibraryBranchId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.LibraryBranchId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
