@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using LibraryManagement3.Data;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication.Facebook;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,18 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
+
+builder.Services.AddAuthentication()
+    .AddGoogle(googleOptions =>
+    {
+        googleOptions.ClientId = "825235047578-dbkiitu89cc9an1avl3gg0ia4t6gshve.apps.googleusercontent.com";
+        googleOptions.ClientSecret = "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";
+    })
+    .AddFacebook(facebookOptions =>
+    {
+        facebookOptions.AppId = "989754932787281";
+        facebookOptions.AppSecret = "ab12908dfe005436226cb7e6ff279387";
+    });
 
 var app = builder.Build();
 

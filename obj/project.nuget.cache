@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "C53dx1V1thAKn3duCICv+TWNbJgk9TA55ERLT1MtN7cmkws9eskpcdOIaj6ctn0ZU+VkMufLBhPLR+EZSSf0wQ==",
+  "dgSpecHash": "gPft90UDALo4O59ZMhygnhFm6UoGavIEEC51Ad5OOjcPiilB3jpRuW0MNweYk47zOXKZFtyJnRXZD0f8X/XPqA==",
   "success": true,
   "projectFilePath": "/Users/Mars/Coding-Projects/fdu/adv_application_programming/LibraryManagement3/LibraryManagement3.csproj",
   "expectedPackageFiles": [
@@ -54,6 +54,8 @@
     "/Users/Mars/.nuget/packages/humanizer.core.zh-cn/2.14.1/humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "/Users/Mars/.nuget/packages/humanizer.core.zh-hans/2.14.1/humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "/Users/Mars/.nuget/packages/humanizer.core.zh-hant/2.14.1/humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "/Users/Mars/.nuget/packages/microsoft.aspnetcore.authentication.facebook/8.0.3/microsoft.aspnetcore.authentication.facebook.8.0.3.nupkg.sha512",
+    "/Users/Mars/.nuget/packages/microsoft.aspnetcore.authentication.google/8.0.3/microsoft.aspnetcore.authentication.google.8.0.3.nupkg.sha512",
     "/Users/Mars/.nuget/packages/microsoft.aspnetcore.cryptography.internal/8.0.1/microsoft.aspnetcore.cryptography.internal.8.0.1.nupkg.sha512",
     "/Users/Mars/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/8.0.1/microsoft.aspnetcore.cryptography.keyderivation.8.0.1.nupkg.sha512",
     "/Users/Mars/.nuget/packages/microsoft.aspnetcore.diagnostics.entityframeworkcore/8.0.1/microsoft.aspnetcore.diagnostics.entityframeworkcore.8.0.1.nupkg.sha512",
