@@ -4,8 +4,14 @@
     ViewData["Title"] = "Error";
 }
 
+
+<div class="text-center">
+<img src="~/images/account-exception-128.png" alt="" loading="lazy"/>
+
 <h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
+
+<hr/>
 
 @if (Model.ShowRequestId)
 {
@@ -16,3 +22,4 @@
         <strong>Error Message:</strong> @Model.ExceptionMessage
     </p>
 }
+</div>

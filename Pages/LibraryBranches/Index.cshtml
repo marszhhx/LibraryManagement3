@@ -5,32 +5,49 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.LibraryBranch[0].BranchName)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.LibraryBranch) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.BranchName)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.LibraryBranchId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.LibraryBranchId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.LibraryBranchId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<section class="mb-4">
+    <div class="card">
+        <div class="card-header text-center py-3">
+            <h5 class="mb-0 text-center">
+                <strong>Library Branch Management</strong>
+            </h5>
+        </div>
+        <div class="m-lg-3">
+            <a asp-page="./Create" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Add New Branch
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LibraryBranch[0].BranchName)
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.LibraryBranch) {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BranchName)
+                            </td>
+                            <td>
+                                                                <a asp-page="./Edit" asp-route-id="@item.LibraryBranchId" class="btn btn-sm btn-info">Edit</a>
+                                                                <a asp-page="./Details" asp-route-id="@item.LibraryBranchId" class="btn btn-sm btn-secondary">Details</a>
+                                                                <a asp-page="./Delete" asp-route-id="@item.LibraryBranchId" class="btn btn-sm btn-danger">Delete</a>
+
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

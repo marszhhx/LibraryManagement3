@@ -6,54 +6,67 @@
     <title>@ViewData["Title"] - LibraryManagement3</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/sidebar.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/LibraryManagement3.styles.css" asp-append-version="true" />
 </head>
+
+
 <body>
+    <!--Main Navigation-->
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">LibraryManagement3</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Global Error Demo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Authors/Index">Authors</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/LibraryBranches/Index">LibraryBranches</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Customers/Index">Customers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Books/Index">Books</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
+        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+            <div class="position-sticky">
+                <div class="list-group list-group-flush mx-3 mt-4">
+                    <a class="list-group-item list-group-item-action py-2" data-mdb-ripple-init aria-current="true" asp-area="" asp-page="/Index">
+                        <i class="fas fa-house-user fa-fw me-3"></i><span>Home</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2" data-mdb-ripple-init asp-area="" asp-page="/Privacy">
+                        <i class="fas fa-mobile fa-fw me-3"></i><span>Global Error Demo</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2" data-mdb-ripple-init asp-area="" asp-page="/Authors/Index">
+                        <i class="fas fa-chart-line fa-fw me-3"></i><span>Authors</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2" data-mdb-ripple-init asp-area="" asp-page="/LibraryBranches/Index">
+                        <i class="fas fa-box-open fa-fw me-3"></i><span>Library Branches</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2" data-mdb-ripple-init asp-area="" asp-page="/Customers/Index">
+                        <i class="fas fa-people-arrows fa-fw me-3"></i><span>Customers</span>
+                    </a>
+                                    <a class="list-group-item list-group-item-action py-2" data-mdb-ripple-init asp-area="" asp-page="/Books/Index">
+                                        <i class="fas fa-people-arrows fa-fw me-3"></i><span>Books</span>
+                                    </a>
                 </div>
             </div>
         </nav>
+        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#sidebarMenu"
+                        aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Brand -->
+                <a class="navbar-brand ms-4" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/librarylogo.png" height="45" alt="" loading="lazy"/>
+                </a>
+                <partial name="_LoginPartial" />
+            </div>
+        </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - LibraryManagement3 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <main style="margin-top: 58px">
+        <div class="container pt-4">
+            <!-- Section: Main chart -->
+            <section class="mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        @RenderBody()
+                    </div>
+                </div>
+            </section>
         </div>
-    </footer>
+    </main>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
