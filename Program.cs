@@ -22,13 +22,13 @@ builder.Services.AddControllersWithViews(); // For MVC
 builder.Services.AddAuthentication()
     .AddGoogle(googleOptions =>
     {
-        googleOptions.ClientId = "825235047578-dbkiitu89cc9an1avl3gg0ia4t6gshve.apps.googleusercontent.com";
-        googleOptions.ClientSecret = "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";
+        // googleOptions.ClientId = "825235047578-dbkiitu89cc9an1avl3gg0ia4t6gshve.apps.googleusercontent.com";
+        // googleOptions.ClientSecret = "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";
     })
     .AddFacebook(facebookOptions =>
     {
-        facebookOptions.AppId = "989754932787281";
-        facebookOptions.AppSecret = "ab12908dfe005436226cb7e6ff279387";
+        // facebookOptions.AppId = "989754932787281";
+        // facebookOptions.AppSecret = "ab12908dfe005436226cb7e6ff279387";
     });
 
 var app = builder.Build();
